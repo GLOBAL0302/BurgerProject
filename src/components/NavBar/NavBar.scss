@@ -1,0 +1,31 @@
+h3{
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 153%;
+  color: #000;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
+}
+ul > li{
+  list-style: none;
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(211, 199, 223, 0.98) 0%, rgba(126, 62, 190, 0.98) 100%);
+  }
+  a{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 153%;
+    color: #989595;
+    text-decoration: none;
+  }
+}

@@ -1,11 +1,13 @@
 import './App.css';
 import Menu from './containers/Menu.tsx';
-
+import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
-  return(
+  return (
     <>
-      <Menu/>
+      <Routes>
+        <Route path="/" element={<Menu/>}/>
+      </Routes>
     </>
   );
 };
