@@ -1,6 +1,6 @@
 import mainPic from '../../img/mainPageAdd.svg';
-import { Button } from 'antd';
-import { RightOutlined } from '@ant-design/icons';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';import { Button } from '@mui/material';
+import "./IntroPage.scss"
 
 interface Props{
   onClick: ()=>void;
@@ -25,9 +25,11 @@ const IntroPage:React.FC<Props> = ({onClick}) => {
           Your Food
         </h4>
         <Button
+          color="inherit"
           onClick={onClick}
-          type="dashed">
-          Get Started <RightOutlined />
+          variant="outlined"
+        >
+          Get Started <ChevronRightIcon/>
         </Button>
       </div>
     </div>

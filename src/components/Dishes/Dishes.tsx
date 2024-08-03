@@ -2,7 +2,7 @@ import "./Dishes.scss"
 
 const Dishes = () => {
   return (
-    <div className="container">
+    <div className="">
       <h3>Dishes</h3>
 
     </div>

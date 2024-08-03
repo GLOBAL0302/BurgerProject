@@ -3,17 +3,21 @@ import IntroPage from '../components/IntroPage/IntroPage.tsx';
 import { useState } from 'react';
 import NavBar from '../components/NavBar/NavBar.tsx';
 import Dishes from '../components/Dishes/Dishes.tsx';
+import BottomNav from '../components/BottomNav/BottomNav.tsx';
 
 
 const Menu = () => {
   const [isIntroOpen, setIsIntroOpen] = useState(false);
   return (
-    <div className="menu">
-      {isIntroOpen && <IntroPage onClick={()=>setIsIntroOpen(false)} />}
-      <NavBar/>
-      <Dishes/>
-
-    </div>
+    <>
+      {isIntroOpen ? <IntroPage onClick={() => setIsIntroOpen(false)} /> :
+        <div className="menu d-flex flex-column container">
+          <NavBar/>
+          <Dishes/>
+          <BottomNav />
+        </div>
+      }
+    </>
   );
 };
 
