@@ -19,7 +19,11 @@ ul > li{
     width: 75px;
     height: 75px;
     border-radius: 20px;
-    background: linear-gradient(180deg, rgba(211, 199, 223, 0.98) 0%, rgba(126, 62, 190, 0.98) 100%);
+    background: linear-gradient(180deg, rgba(211, 199, 223, 0.98) 0%, rgba(126, 62, 190, 0.98) 100%);}
+    transition: background-color 0.5s ease-in-out ;
+  .active{
+    background: #7e3ebe;
+    transition: background-color 0.5s ease-in-out;
   }
   a{
     font-weight: 400;

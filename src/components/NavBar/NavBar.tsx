@@ -3,9 +3,20 @@ import "./NavBar.scss";
 import { NavBarList } from '../../constants.ts';
 import { Box, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { useAppDispatch, useAppSelector } from '../../app/hooks.ts';
+import { NavBarItems } from '../../types.ts';
+import {selectSelectedItem, setSelectedItem } from '../../store/navSlice.ts';
+
 
 
 const NavBar = () => {
+  const dispatch = useAppDispatch();
+  const selectedItem:string = useAppSelector(selectSelectedItem);
+
+  const onClickDishBar = (item:NavBarItems)=>{
+    dispatch(setSelectedItem(item.title))
+  }
+
   return (
     <div className="pt-3">
       <div className="d-flex align-items-center justify-content-between mb-3">
@@ -24,8 +35,10 @@ const NavBar = () => {
         {NavBarList.map((item) => (
           <li
             className="text-center"
+            onClick={()=>onClickDishBar(item)}
             key={item.title}>
-            <div className="mb-2">
+            <div
+              className={`mb-2 ${selectedItem === item.title ? 'active' : ''}`}>
               <img
                 width="90%"
                 height="100%"
